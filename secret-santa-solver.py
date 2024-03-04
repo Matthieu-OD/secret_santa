@@ -32,7 +32,7 @@ def main(people: list[str], couples: list[tuple[str, str]]):
 
         while not receiver:
             if next_index == index:
-                raise Exception("An error occured when building your secret santa list")
+                raise Exception("An error occured while building your secret santa list")
             elif is_couple(person, people[next_index], couples) or next_index in has_gift:
                 next_index = (next_index + 1) % len(people)
             else:
