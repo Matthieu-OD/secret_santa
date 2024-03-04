@@ -27,18 +27,25 @@ No additional installation is required just python, as the script uses standard 
 Clone this repository to your local machine:
 
 ```
-git clone https://yourrepositoryurl.com/secret-santa-solver.git
+git clone https://github.com/Matthieu-OD/secret_santa.git
 cd secret-santa-solver
 ```
 
 ## Usage
 To run the Secret Santa Solver, execute the following command in the terminal:
 
-```
+```sh
 python secret_santa_solver.py
 ```
 
-Ensure you have defined the list of participants and couples within the script as per your group's specifics.
+This will use the examples that were given in the assignment.
+
+You can add params following this example:
+```sh
+python secret-santa-solver.py --people "Alice,Bob,Charlie,Dana,Eve,Frank,George,Hannah" --couples "Alice,Bob;Charlie,Dana;Eve,Frank;George,Hannah"
+```
+
+Or if you prefer you cand directly modify the variables `PEOPLE` and `COUPLES` in the `secret-santa-solver.py` file. More information in the next section.
 
 ## Configuration
 - **Participants**: Update the `PEOPLE` list with the names of all participants.
@@ -53,6 +60,3 @@ COUPLES = [("Florent", "Jessica"), ("Coline", "Emilien")]
 ## Notes
 
 On a larger project I would set up pre-commit with github actions to ensure good code quality.
-
-## Testing
-To test the solution with different group configurations, modify the `PEOPLE` and `COUPLES` lists as needed and rerun the script. The script's output will display the Secret Santa assignments or an error message if a valid configuration cannot be found.
